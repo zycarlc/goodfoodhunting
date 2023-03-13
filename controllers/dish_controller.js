@@ -1,10 +1,7 @@
 
 const express = require('express')
 const router = express.Router();
-const { Pool } = require('pg');
-const db = new Pool({
-    database: 'goodfoodhunting',
-})
+const db = require("./../db");
 
 const ensureLoggedIn = require('../controllers/ensure_logged_in')
 

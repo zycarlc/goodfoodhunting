@@ -3,7 +3,8 @@ CREATE DATABASE goodfoodhunting;
 CREATE TABLE dishes (
     id SERIAL PRIMARY KEY,
     title TEXT,
-    image_url TEXT
+    image_url TEXT,
+    user_id INTEGER
 );
 
 CREATE TABLE users (
@@ -12,7 +13,7 @@ CREATE TABLE users (
     password_digest TEXT
 );
 
-INSERT INTO dishes (title, image_url) VALUES ('cake', 'https://www.servedfromscratch.com/wp-content/uploads/2014/12/Crock-Pot-Chicken-Pho-18-2.jpg');
+INSERT INTO dishes (title, image_url, user_id) VALUES ('cake', 'https://www.servedfromscratch.com/wp-content/uploads/2014/12/Crock-Pot-Chicken-Pho-18-2.jpg', 1);
 INSERT INTO dishes (title, image_url) VALUES ('goose', 'https://www.thedeliciouscrescent.com/wp-content/uploads/2018/12/Roast-Goose-Square.jpg');
 INSERT INTO dishes (title, image_url) VALUES ('cake', 'https://www.michels.com.au/app/uploads/2020/03/MP3960-Website-ClickCollect-Update_Images8.jpg');
 

@@ -28,10 +28,7 @@ const session = require('express-session');
  * 
  */
 
-const { Pool } = require('pg');
-const db = new Pool({
-    database: 'goodfoodhunting',
-})
+const db = require("./db")
 
 
 app.set("view engine", "ejs")
