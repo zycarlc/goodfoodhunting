@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            text-align: center;
+        }
+        img {
+            max-width: 200px;
+            aspect-ratio: 1/1 ;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>ho</h1>
+    <section class="dishes">
+        <% for (let dish of dishes) { %>
+            <div class="ui-card">
+                <h2> <a href="/dishes/<%= dish.id %>"><%= dish.title %></a></h2>
+                <img src="<%= dish.image_url %>" alt="">
+                <p> <%= dish.description %> </p>
+            </div>
+        <% } %>
+    </section>
+</body>
+</html>
